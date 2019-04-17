@@ -1,0 +1,133 @@
+body
+{
+font-family: 'Dosis', sans-serif;
+}
+
+h1 {
+    text-align: center;
+    font: bold small-caps 2em cursive;
+    font-size: 5em;
+    color: #fff;
+    text-shadow: #c6c2c2 5px 5px 14px;
+    margin-bottom: .3em;
+}
+a {
+    text-decoration: none;
+    color: #b2c2d9;
+}
+
+
+.first
+{
+font-family: 'Dancing Script', cursive;
+font-size: 2em;
+margin-top: 0;
+padding: 0 4em;
+text-align: center;
+color: #8b8582;
+text-align: center;
+}
+
+.menu
+{
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.lk
+{
+  display: block;
+  font: bold small-caps 1em cursive;
+  color: black;
+  letter-spacing: 1px;
+  padding: 0.5em 1em;
+  margin: 0.5em;
+}
+
+span
+
+{
+  font-weight: bold;
+}
+img
+{
+max-width: 100%;
+}
+
+.footer
+{
+margin-left: 10px;
+margin-top: 100px;
+}
+
+.container
+{
+  background-color: white;
+}
+
+.header
+{
+  grid-area: header;
+}
+.sidebar
+{
+  grid-area: sidebar;
+}
+.main
+{
+  grid-area: main;
+}
+.sidebar2
+{
+  grid-area: sidebar2;
+}
+.footer
+{
+grid-area: footer;
+}
+.sclog
+{
+  grid-area: sclogo;
+}
+.container
+{
+  display: grid;
+  /*max-width:1880px;*/
+  margin:0 auto;
+  grid-gap: 1em;
+  justify-content: stretch;
+
+  grid-template-areas:
+  "header"
+  "sidebar"
+  "sidebar2"
+  "main"
+  "sclog"
+  "footer";
+}
+
+@media only screen and (min-width:500px) {
+.container{
+grid-template-columns: repeat(2, 1fr);
+grid-template-areas:
+"header header"
+"sidebar main"
+"sidebar2 sidebar2"
+"footer footer";
+}
+.menu
+{
+  flex-direction: row;
+}
+}
+
+@media only screen and (min-width:600px){
+.container {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+  "header header header"
+  "sidebar main sidebar2"
+  "footer footer footer";
+}
+}

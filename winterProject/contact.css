@@ -1,0 +1,169 @@
+body
+{
+font-family: 'Dosis', sans-serif;
+}
+
+h1
+{
+  text-align: center;
+  font:bold small-caps 2em cursive;
+}
+
+.hours
+{
+text-decoration: underline;
+font-weight: bolder;
+}
+
+h3
+ {
+	font-size: 1.2em;
+	margin: 0 0 1.5em 0;
+}
+em
+{
+	font-size: .8em;
+	color: rgba(0,0,0,.4);
+}
+form ul
+{
+  list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+form ul li
+{
+	margin-bottom: 1em;
+}
+form
+{
+	max-width: 40em;
+	border: 1px solid #666;
+	border-radius: 10px;
+	background-color:#E1FEFD;
+	padding: 1em;
+  box-sizing: border-box;
+	}
+  *, *:before, *:after {
+  	box-sizing: inherit;
+  	}
+form
+{
+font-family: 'Dosis', sans-serif;
+font-size: 100%;
+margin: 2em 10%;
+line-height: 1;
+  }
+form li
+{
+  display: flex;
+  flex-wrap: wrap;
+  }
+
+label
+ {
+  flex: 0 0 8em;
+  margin-right: 1em;
+  margin-bottom: 4px;
+  color: #04699d;
+}
+input, textarea
+{
+  flex: 1 1 20em;
+}
+
+input[type="submit"]
+ {
+  width: 10em;
+  height: 2em;
+  background: white;
+  border: 1px solid #04699d;
+  border-radius: 4px;
+  font-size: inherit;
+  flex: 0 1 8em;
+  margin: 0 auto;
+  }
+  textarea
+  {
+  	display: block;
+  	height: 5em;
+  	border: 1px solid rgba(0,0,0,.3);
+  	padding-left: 6px;
+  	font-family: inherit;
+  	font-size: .875em;
+  	line-height: 1.25;
+  	overflow: auto;
+  	resize: none;
+  }
+  input.textinput
+   {
+  	height: 2em;
+  	border: 1px solid rgba(0,0,0,.3);
+  	padding-left: 6px;
+  	font-family: inherit;
+  	font-size: .875em;
+  }
+  .footnav
+  {
+  list-style-type: none;
+  }
+
+.header
+{
+  grid-area: header;
+}
+.about
+{
+grid-area: about;
+}
+.cont
+{
+  grid-area: cont;
+}
+.footnav
+{
+grid-area: footnav;
+}
+.footer
+{
+grid-area: footer;
+}
+.container
+{
+  display: grid;
+  /*max-width:1880px;*/
+  margin:0 auto;
+  grid-gap: 1em;
+  justify-content: stretch;
+
+  grid-template-areas:
+  "header"
+  "about"
+  "cont"
+  "footnav"
+  "footer"
+
+  ;
+}
+
+@media only screen and (min-width:500px) {
+.container{
+grid-template-columns: repeat(2, 1fr);
+grid-template-areas:
+"header header"
+"about about"
+"cont cont"
+"footnav footer";
+}
+}
+
+@media only screen and (min-width:600px){
+.container {
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas:
+  "header header header header"
+  "about about about about"
+  "cont cont cont cont"
+"footnav footnav footer footer";
+}
+}
